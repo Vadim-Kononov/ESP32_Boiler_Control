@@ -43,12 +43,12 @@
       
 * Таблица соединений
 
-PZEM-004T V3.0	|WEMOS D1 Mini ESP32
+ 	|WEMOS D1 Mini ESP32
 ----------------|--------------------------
-+5V             |+3.3V
-Rx              |IO17 (u2TxD)
-Tx              |IO16 (u2RxD)
-GND             |GND
+            | 
+            | 
+            | 
+            | 
 
 
 TFT ST7789     	|WEMOS D1 Mini ESP32
@@ -61,7 +61,7 @@ RES             |IO5
 DC              |IO23
 BLK             |Не подключен
 
-* Команды, используемые для проверки состояния или изменения настроек, передаваемые Bluetooth Terminal
+* Команды, используемые для проверки состояния или изменения настроек, передаваемые через WiFi и Bluetooth Telnet
 
 
 Команда                  |Действие
@@ -77,16 +77,7 @@ Scan                     |Сканирование каналов WiFi
 Time                     |Вывод текущего времени
 Mem                      |Вывод количества свободной памяти
 OTA                      |Разрешение загрузки по воздуху
-PZEM/Main/[kWh]          |Ввод текущего значения счетчика, ввод-вывод, float
-PZEM/Before/[kWh]        |Ввод значения счетчика на день начала отсчета месячного расхода, ввод-вывод, float
-PZEM/Correct/[kWh]       |Коррекция расхода электроэнергии приведенная к одному кВт*ч, "-" если счетчик спешит, "+" если отстает, ввод-вывод, float
-PZEM/Date/[day]/[month]  |Ввод дня и месяца начала отсчета расхода, ввод-вывод, int/int
-PZEM/Delay/[sec]         |Ввод задержки скроллинга на экране счетчика, ввод-вывод, float
-PZEM/PriceLow/[RUR]      |Ввод цены киловатта в пределах социального лимита, ввод-вывод, float
-PZEM/PriceHigh/[RUR]     |Ввод цены киловатта за пределом социального лимита, ввод-вывод, float  
-PZEM/LowLimit/[kWh]      |Ввод порога социального лимита, ввод-вывод, float 
-PZEM/AlarmPower/[kWh]    |Ввод значения мощности, при превышении которого присылается оповещение, ввод-вывод, float 
-PZEM/AlarmRate/[RUR]     |Ввод значения стоимости, при превышении которого присылается оповещение, ввод-вывод, float 
+
 Help                     |Вывод списка команд
 ?                        |Вывод списка команд
   
@@ -95,7 +86,6 @@ Help                     |Вывод списка команд
 ### Используемое ПО, с благодарностью к авторам
 Приложение                | Ссылка
 --------------------------|--------------------------
-mandulaj/PZEM-004T-v30    |https://github.com/mandulaj/PZEM-004T-v30
 IoT MQTT Panel Pro        |https://play.google.com/store/apps/details?id=snr.lab.iotmqttpanel.prod.pro
 Serial Bluetooth Terminal |https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal
 IFTTT                     |https://play.google.com/store/apps/details?id=com.ifttt.ifttt)
@@ -105,8 +95,7 @@ ThingView Full            |https://play.google.com/store/apps/details?id=com.cin
 ### Посмотреть на результат:
 Сервис     | Ссылка
 -----------|--------------------
-ThingSpeak |https://thingspeak.com/channels/1061956
-YouTube    |https://youtu.be/sH5VCsjLUSs    
-
+ThingSpeak |
+YouTube    |
   
   
