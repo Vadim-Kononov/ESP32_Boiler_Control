@@ -26,7 +26,7 @@
 <img src="https://img.shields.io/github/directory-file-count/Vadim-Kononov/ESP32_Boiler_Control?style=flat-square">
 
 <p align="center">
-<img  src="Diagram_1.png" width="75%">
+<img  src="Diagram_1.svg" width="75%">
 </p>
 
 
