@@ -26,6 +26,8 @@
 <img  src="Diagram_1.png" width="50%">
 </p>
 
+[![GitHub issues](https://img.shields.io/github/issues/Vadim-Kononov/ESP32_Boiler_Control)](https://github.com/Vadim-Kononov/ESP32_Boiler_Control/issues)
+
 * При сборке 
   * При запуске 
     * 
