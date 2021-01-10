@@ -27,7 +27,7 @@
 </p>
 
 [![GitHub issues](https://img.shields.io/github/issues/Vadim-Kononov/ESP32_Boiler_Control)](https://github.com/Vadim-Kononov/ESP32_Boiler_Control/issues)
-
+![GitHub repo file count](https://img.shields.io/github/directory-file-count/Vadim-Kononov/ESP32_Boiler_Control)
 * При сборке 
   * При запуске 
     * 
