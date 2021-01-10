@@ -22,8 +22,10 @@
   * Получение уведомлений
     * при выполнении вращения рукоятки газового клапана
     * 
-<img src="https://img.shields.io/github/directory-file-count/Vadim-Kononov/ESP32_Boiler_Control?style=flat-square">
-<img  src="Diagram_1.svg" width="50%">
+<p align="center">
+<img  src="Diagram_1.png" width="50%">
+</p>
+
 * При сборке 
   * При запуске 
     * 
