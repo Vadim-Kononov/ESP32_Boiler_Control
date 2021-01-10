@@ -23,9 +23,9 @@
     * при выполнении вращения рукоятки газового клапана
     * 
 
-
-
-![Diagram_1](Diagram_1.png)
+<p align="center">
+<img  src="Diagram_1.png" width="75%">
+</p>
 
 
 * При сборке 
