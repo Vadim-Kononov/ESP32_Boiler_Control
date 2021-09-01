@@ -80,6 +80,12 @@ mqttClient.publish("temp_dif",        0, false, string_temp_dif.c_str());       
 mqttClient.publish("temp_water",      0, false, String(now_Store[ROLE].temp_water, 1).c_str());                                         // Публикация температуры воды в котле
 mqttClient.publish("temp_gas",        0, false, String(now_Store[ROLE].temp_gas, 1).c_str());                                           // Публикация температуру отходящих газов
 
+mqttClient.publish("hum_room",        0, false, String(now_Store[ROLE].hum_room, 1).c_str());                                           // Публикация влажности в комнате
+mqttClient.publish("press_room",      0, false, String(now_Store[ROLE].press_room, 1).c_str());                                         // Публикация даления в комнате
+mqttClient.publish("temp_outdoor",    0, false, String(now_Store[ROLE].temp_outdoor, 1).c_str());                                       // Публикация температуры во дворе
+mqttClient.publish("hum_outdoor",     0, false, String(now_Store[ROLE].hum_outdoor, 1).c_str());                                        // Публикация влажности во дворе
+mqttClient.publish("press_outdoor",   0, false, String(now_Store[ROLE].press_outdoor, 1).c_str());                                      // Публикация давления во дворе
+
 mqttClient.publish("temp_trend",      0, false, string_temp_trend.c_str());                                                             // Публикация тренда
 
 mqttClient.publish("elapsed_control", 0, false, String(xTaskGetTickCount() - time_msec_control).c_str());                               // Публикация времени от последней регулировки для диаграммы
