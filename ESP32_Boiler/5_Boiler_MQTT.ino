@@ -90,11 +90,15 @@ mqttClient.publish("temp_trend",      0, false, string_temp_trend.c_str());     
 
 mqttClient.publish("elapsed_control", 0, false, String(xTaskGetTickCount() - time_msec_control).c_str());                               // Публикация времени от последней регулировки для диаграммы
 mqttClient.publish("remained_control",0, false, String(60000 * time_min_control - (xTaskGetTickCount() - time_msec_control)).c_str());  // Публикация оставшегося времени до следующей регулировки для диаграммы
-    
-mqttClient.publish("time_position",   0, false, String(string_gas_state + " " + string_position + " " + string_situation + " ★ " + Hour_display (xTaskGetTickCount() - time_msec_position) + + " " + string_mode_state).c_str());  // Публикация последнего шага и времени от последнего вращения
+mqttClient.publish("string_status_1", 0, false, string_status_1.c_str());                                                                // Публикация строки из положения и счетчика поворотов
+mqttClient.publish("string_status_2", 0, false, string_status_2.c_str());                                                                // Публикация последнего шага и времени от последнего вращения
 
 if (!flag_position) mqttClient.publish("position",        0, false, String(position_int).c_str());                                      // Публикация текущего положения Sit630
 else                mqttClient.publish("position",        0, false, String("#").c_str());                                               // Если выполняется поворот то публикация #
+
+mqttClient.publish("position_dec",    0, false, String(position_dec, 2).c_str());                                                       // Положения десятичным числом
+mqttClient.publish("position_dif",    0, false, String((position_dif/4.0), 2).c_str());                                                 // Положения десятичным числом
+mqttClient.publish("turn_counter",    0, false, String(turn_counter).c_str());                                                          // Счетчика поворотов
 
 mqttClient.publish("mode",            0, false, String(control_mode).c_str());                                                          // Публикация режима
 mqttClient.publish("time_control",    0, false, String(time_min_control).c_str());                                                      // Публикация времени прошедшего от управления

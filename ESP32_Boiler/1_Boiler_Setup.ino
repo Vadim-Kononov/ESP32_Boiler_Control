@@ -86,6 +86,7 @@ string_situation = " ⚪";                     //Начальная строка
 
 position_old      = memory.getInt("position");          //Восстановление из памяти позиции регулятора
 position_int      = position_old;                       //Начальное значение позиции регулятора
+turn_counter      = memory.getInt("turn_counter", 0);   //Восстановление счетчика поворотов
 control_mode      = memory.getInt("control_mode", 1);   //Восстановление из памяти режима регулирования
 time_min_control  = memory.getInt("time_control", 30);  //Восстановление из памяти периода регулирования
 temp_zad          = memory.getFloat("temp_zad", 24.0);  //Восстановление из памяти заданной температуры

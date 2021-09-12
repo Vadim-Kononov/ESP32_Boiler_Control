@@ -94,6 +94,9 @@ if (!string_2.equalsIgnoreCase("")) {temp_zad = string_2.toFloat(); memory.putFl
 Writeln ("> Set temperature: " + String(temp_zad) + " ℃", terminal);
 }
 
+/* "Turn". Сброс счетчика поворотов*/
+else if (string_1.equalsIgnoreCase("Turn")) {memory.putInt("turn_counter", 0); Writeln("> Turn counter: " + String(memory.getInt("turn_counter")), terminal);}
+
 /* "Posit". Позиция регулятора*/
 else if (string_1.equalsIgnoreCase("Posit"))
 {
@@ -137,8 +140,8 @@ else if (string_1.equalsIgnoreCase("?") || string_1.equalsIgnoreCase("Help"))
 {Writeln (">" +
 String("\n| Scan | WiFi | Reconnect | Reset |") +
 String("\n| Login/<SSID>/<Password> |") +
+String("\n| Count | CountRes | Turn |") +
 String("\n| Time | Mem  | OTA |") +
-String("\n| Count | CountRes |") +
 String("\n| Notice | HourDown/<0÷23> | HourUp/<0÷23>") +
 String("\n| Cycle/<15|30|60> | Mode/<0÷3>") +
 String("\n| Posit/<1÷21> x=P/4+0.75") +

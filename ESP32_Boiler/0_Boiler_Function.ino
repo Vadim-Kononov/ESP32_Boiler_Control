@@ -87,7 +87,7 @@ void Clock ()
 seconds++;                               flag_seconds = true;
 if (seconds > 59) {seconds=0; minutes++; flag_minutes = true; flag_time_control = true;}
 if (minutes > 59) {minutes=0; hours++;   flag_hours = true;}
-if (hours > 23)   {hours=0; GetTime();}
+if (hours > 23)   {hours=0; turn_counter = 0; GetTime();}
 }
 /**/
 
@@ -130,8 +130,11 @@ position_dec = state / 4.0 + 0.75;                     // Преобразова
 now_Store[ROLE].reg_position = (int) position_dec;
   
 string_position = "⭕0.0";
-     if (position_dif > 0) {string_position =  String("🔺") + "+" + String(position_dif/4.0, 1) ; time_msec_position = xTaskGetTickCount();} 
-else if (position_dif < 0) {string_position =  String("🔻") + String(position_dif/4.0, 1);        time_msec_position = xTaskGetTickCount();}
+     if (position_dif > 0) {string_position =  String("🔺") + "+" + String(position_dif/4.0, 1) ; time_msec_position = xTaskGetTickCount(); turn_counter++; memory.putInt("turn_counter", turn_counter);} 
+else if (position_dif < 0) {string_position =  String("🔻") + String(position_dif/4.0, 1);        time_msec_position = xTaskGetTickCount(); turn_counter++; memory.putInt("turn_counter", turn_counter);}
+
+string_status_1 = String(position_dec, 2) + " ★ " + String(turn_counter);
+string_status_2 = string_gas_state + " " + string_position + " " + string_situation + " ★ " + Hour_display (xTaskGetTickCount() - time_msec_position) + " " + string_mode_state;
 }
 /**/
 
